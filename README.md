@@ -11,17 +11,17 @@ Frequently used stuff I tend to forget.
 
 ### reconfigure Git after the transfer
 
-```
+````
 $ git remote set-url origin new_url
-```
+````
 
 #### Example
 
-```
+````
 $ cat .git/config
 $ git remote set-url origin https://github.com/cas-dt/css-text
 $ cat .git/config
-```
+````
 
 ### Links
 
@@ -38,7 +38,7 @@ $ cat .git/config
 
 * [Adding an existing project to GitHub using the command line](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
 
-```
+````
 # if not yet initialized
 $ git init
 
@@ -56,13 +56,13 @@ $ git remote -v
 
 # push to master
 $ git push -u origin master
-```
+````
 
 ### Troubleshooting
 
 In this case probably caused because the repo was initialized with a license.
 
-```
+````
 $ git push -u origin master
 
 To https://github.com/cas-dt/animation
@@ -84,11 +84,11 @@ Merge made by the 'recursive' strategy.
  create mode 100644 LICENSE
 
 $ git push -u origin master
-```
+````
 
 If this doesn’t work, the merge can be forced.
 
-```
+````
 $ git pull origin master --allow-unrelated-histories
 
 From https://github.com/oolong32/drawbot-exercises
@@ -99,10 +99,27 @@ Merge made by the 'recursive' strategy.
  create mode 100644 LICENSE
 
 $ git push -u origin master
-```
+````
 
 ## Set new remote link after renaming repo
 
-```
+````
 git remote set-url origin new_url
-```
+````
+
+## Früheren Commit an Spitze rücken
+
+If you want to commit on top of the current HEAD with the exact state at a different commit, undoing all the intermediate commits, then you can use reset to create the correct state of the index to make the commit.
+
+Siehe [Antwort auf ‘Revert to a commit by a SHA hash in Git? [duplicate]’](https://stackoverflow.com/questions/1895059/revert-to-a-commit-by-a-sha-hash-in-git/1895095#1895095)
+
+````
+# Reset the index and working tree to the desired tree
+# Ensure you have no uncommitted changes that you want to keep
+git reset --hard 56e05fced
+
+# Move the branch pointer back to the previous HEAD
+git reset --soft HEAD@{1}
+
+git commit -m "Revert to 56e05fced"
+````
