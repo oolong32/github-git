@@ -128,6 +128,6 @@ git commit -m "Revert to 56e05fced"
 
 ### List Branches
 
-    git branch -a
+    git branch
 
-
+[Git Manual, Branch management](https://git-scm.com/book/en/v2/Git-Branching-Branch-Management)
