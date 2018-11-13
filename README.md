@@ -123,3 +123,11 @@ git reset --soft HEAD@{1}
 
 git commit -m "Revert to 56e05fced"
 ````
+
+## Some commands
+
+### List Branches
+
+    git branch -a
+
+
