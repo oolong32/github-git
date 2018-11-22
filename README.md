@@ -139,7 +139,6 @@ git merge branchname
 git branch -d branchname 
 ```
 
-
 ### List Branches
 
     git branch
