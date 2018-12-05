@@ -124,6 +124,15 @@ git reset --soft HEAD@{1}
 git commit -m "Revert to 56e05fced"
 ````
 
+### SSl CA cert Error
+
+    $ git pull
+    fatal: unable to access 'https://github.com/oolong32/fubar/': Problem with the SSL CA cert (path? access rights?)
+
+Disable the SSL CERT verification. This will prevent CURL to verity the HTTPS certification. Note: **disabling SSL verification has security implications.**
+    
+    $ git config http.sslVerify false
+
 ## Branches
 
 ### Merging a Branch
@@ -144,3 +153,4 @@ git branch -d branchname
     git branch
 
 [Git Manual, Branch management](https://git-scm.com/book/en/v2/Git-Branching-Branch-Management)
+
