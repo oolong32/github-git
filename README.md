@@ -2,6 +2,8 @@
 
 Frequently used stuff I tend to forget.
 
+Note to myself: Always first read [oh shit, git!](https://ohshitgit.com/).
+
 ## Transfer
 
 * go to Github repo
