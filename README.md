@@ -156,3 +156,16 @@ git branch -d branchname
 
 [Git Manual, Branch management](https://git-scm.com/book/en/v2/Git-Branching-Branch-Management)
 
+### Stashing
+
+```
+git stash
+```
+
+and later
+
+```
+git stash pop
+```
+
+
